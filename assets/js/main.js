@@ -149,3 +149,78 @@ var medium = [
     ]
   } 
 ]
+
+
+var startButton = document.querySelector("#start-btn");
+var nextButton = document.querySelector("#next-btn");
+var questionElement = document.querySelector("#question");
+var answerButtonsElement = document.querySelector("#choices");
+var results = document.querySelector("#results");
+var scoreText = document.querySelector("#score");
+var allQuestionsTotal = document.querySelector("#total");
+
+
+var easy = [
+    {
+      question: "Which planet is known as the 'Red Planet'?",
+      answers: [
+        {text: "Jupiter", answerValid: false},
+        {text: "Mars", answerValid: true},
+        {text: "Venus", answerValid: false}
+      ]
+    },
+    {
+      question: "What is the capital city of France?",
+      answers: [
+        {text: "Rome", answerValid: false},
+        {text: "Paris", answerValid: true},
+        {text: "Madrid", answerValid: false}
+      ]
+    },
+  ];
+  
+ // medium 
+ // hard
+
+
+var questionCounter = 0
+var score = 0
+var currentLevel
+
+// 'play now ' button on click starts the game
+
+startButton.addEventListener("click", startThegame)
+nextButton.style.display = "none"
+// ''next question on click takes us to the next question'
+
+nextButton.addEventListener("click", () => {
+  questionCounter++
+  setNextQuestion()
+})
+
+function startThegame() {
+  // on click on 'play now' the button get hidden 
+  startButton.style.display = "none";
+  nextButton.style.display = "inline-block";
+  questionCounter = 0
+  score = 0
+
+  // set the level (easy,medium,hard)
+  currentLevel = getSelectedLevel()
+
+  // set the total number of questions
+  allQuestionsTotal.innerText = currentLevel.length
+  results.innerHTML = ""
+
+  setQuestion()
+
+}
+
+function setQuestion() {
+
+  if(questionCounter< currentLevel.length){
+    displayQuestion(currentLevel[questionCounter])
+  } else {
+    
+  }
+}
