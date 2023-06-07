@@ -5,22 +5,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Game</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
   <div class="container">
-    <h1>MindMetrics</h1>
-    <div id="question"></div>
-    <div id="choices"></div>
-    <button id="start-btn">Play Now</button>
-    <button id="next-btn">Next Question</button>
-    <div id="results"></div>
-    <div id="score"></div>
-    <div id="total"></div>
-  </div>
-
+    <h1>MindMetrics ( Quiz Game )</h1>
+    
   <form>
+    <label>Choose Level : </label>
     <label>
       <input type="radio" name="level" value="easy" checked>
       Easy
@@ -34,9 +27,22 @@
       Hard
     </label>
   </form>
+  
 
+    <div id="question">
+      <img src="https://play-lh.googleusercontent.com/SSMlhyxUbezajNrRxt4lAWkluoJsK3h_VRLJ8N7yl2dnwM1dHLxxzpsV5UVnYQQgVa4" alt="" width="300">
+    </div>
+    <div id="choices"></div>
+    <div class="startAndnext">
+      <button id="start-btn">Play Now</button>
+    <button id="next-btn">Next Question</button>
+    </div>
+    <div id="results"></div>
+    <div id="score"></div>
+    <div id="total"></div>
+  </div>
 
-
+  <script src="https://code.jquery.com/jquery-3.7.0.slim.js" integrity="sha256-7GO+jepT9gJe9LB4XFf8snVOjX3iYNb0FHYr5LI1N5c=" crossorigin="anonymous"></script>
   <script src="/assets/js/main.js"></script>
 </body>
 
