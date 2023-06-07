@@ -148,7 +148,7 @@ var medium = [
       {text: "Nikola Tesla", answerValid: false}
     ]
   } 
-]
+];
 
 
 var startButton = document.querySelector("#start-btn");
