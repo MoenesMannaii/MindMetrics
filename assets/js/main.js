@@ -148,7 +148,7 @@ var medium = [
       {text: "Nikola Tesla", answerValid: false}
     ]
   } 
-]
+];
 
 
 var startButton = document.querySelector("#start-btn");
@@ -159,28 +159,6 @@ var results = document.querySelector("#results");
 var scoreText = document.querySelector("#score");
 var allQuestionsTotal = document.querySelector("#total");
 
-
-var easy = [
-    {
-      question: "Which planet is known as the 'Red Planet'?",
-      answers: [
-        {text: "Jupiter", answerValid: false},
-        {text: "Mars", answerValid: true},
-        {text: "Venus", answerValid: false}
-      ]
-    },
-    {
-      question: "What is the capital city of France?",
-      answers: [
-        {text: "Rome", answerValid: false},
-        {text: "Paris", answerValid: true},
-        {text: "Madrid", answerValid: false}
-      ]
-    },
-  ];
-  
- // medium 
- // hard
 
 
 var questionCounter = 0
