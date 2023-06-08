@@ -150,9 +150,9 @@ var hard = [
   var totalQuestionsText = document.querySelector("#total")
   
   
-  let questionCounter = 0
-  let score = 0
-  let currentLevel
+  var questionCounter = 0
+  var score = 0
+  var currentLevel
   
   startButton.addEventListener("click", startGame)
 
@@ -252,9 +252,9 @@ var hard = [
 
   function getSelectedLevel() {
     var levelRadios = document.getElementsByName("level")
-    let selectedLevel
+    var selectedLevel
   
-    for (let i = 0; i < levelRadios.length; i++) {
+    for (var i = 0; i < levelRadios.length; i++) {
       if (levelRadios[i].checked) {
         selectedLevel = levelRadios[i].value
         break
