@@ -172,7 +172,7 @@ var hard = [
     currentLevel = getSelectedLevel()
   
     totalQuestionsText.innerText = "Total Questions : " + currentLevel.length
-    $('#total').css({'background': '#effdc9'})
+    $('#total').css({'background': '#85858538'})
     
    scoreText.style.display = "none"
 
@@ -224,22 +224,23 @@ var hard = [
   
     // final result (score)
     scoreText.innerText = `Score: ${score} / ${currentLevel.length}`
-    $('#score').css({'background': '#f2fdce'})
     // result msg
     if (score === currentLevel.length) {
       results.innerText = "Good job all your answers are correct !"
-      $('#results').css({'color':'#000', 'background':'#12ff00'})
+      $('#results').css({'color':'#ffffff', 'background':'#12ff0047'})
     } else if (score === 0) {
       results.innerText = "unfortunately ! all ur answers are uncorrect !"
-      $('#results').css({'color':'white', 'background':'#ff0a0a'})
+      $('#results').css({'color':'#fff', 'background':'#ff0a0a42'})
     } else {
       results.innerText = "Hmm not bad! , some answers are correct !"
-      $('#results').css({'color':'#000', 'background':'#ffde00'})
+      $('#results').css({'color':'#fff', 'background':'#ffde004a'})
     }
     startButton.style.display = "inline-block"
     scoreText.style.display = "flex"
     scoreText.style.margin = "0 auto"
     scoreText.style.justifyContent = "center"
+    $('.startAndnext').css({'display':'none'})
+    $('form').css({'display':'none'})
   
   }
   function resetState() {
@@ -270,5 +271,4 @@ var hard = [
       return hard
     }
   }
-  
-  
+
